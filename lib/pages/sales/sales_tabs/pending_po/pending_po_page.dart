@@ -50,13 +50,21 @@ class _PendingPoPageState extends State<PendingPoPage> {
               columnWidthMode: ColumnWidthMode.fill,
               columns: <GridColumn>[
                 GridColumn(
+                    autoFitPadding: const EdgeInsets.all(8),
                     columnName: 'Work Order Number',
                     label: Container(
                         color: tabselection,
                         padding: const EdgeInsets.all(8.0),
                         alignment: Alignment.center,
-                        child: const Text(
+                        child: Text(
                           'Work Order Number',
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: textPrimary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
                         ))),
                 GridColumn(
                     columnName: 'PO Number',
@@ -64,16 +72,29 @@ class _PendingPoPageState extends State<PendingPoPage> {
                         color: tabselection,
                         padding: const EdgeInsets.all(8.0),
                         alignment: Alignment.center,
-                        child: const Text('PO Number'))),
+                        child: Text(
+                          'PO Number',
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: textPrimary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ))),
                 GridColumn(
                     columnName: 'Customer Name',
                     label: Container(
                         color: tabselection,
                         padding: const EdgeInsets.all(8.0),
                         alignment: Alignment.center,
-                        child: const Text(
+                        child: Text(
                           'Customer Name',
-                          overflow: TextOverflow.ellipsis,
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: textPrimary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
                         ))),
                 GridColumn(
                     columnName: 'PO Date',
@@ -81,56 +102,120 @@ class _PendingPoPageState extends State<PendingPoPage> {
                         color: tabselection,
                         padding: const EdgeInsets.all(8.0),
                         alignment: Alignment.center,
-                        child: const Text('PO Date'))),
+                        child: Text(
+                          'PO Date',
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: textPrimary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ))),
                 GridColumn(
                     columnName: 'Amount',
                     label: Container(
                         color: tabselection,
                         padding: const EdgeInsets.all(8.0),
                         alignment: Alignment.center,
-                        child: const Text('Amount'))),
+                        child: Text(
+                          'Amount',
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: textPrimary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ))),
                 GridColumn(
                     columnName: 'Project Engineer',
                     label: Container(
                         color: tabselection,
                         padding: const EdgeInsets.all(8.0),
                         alignment: Alignment.center,
-                        child: const Text('Project Engineer'))),
+                        child: Text(
+                          'Project Engineer',
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: textPrimary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ))),
                 GridColumn(
                     columnName: 'Quality Engineer',
                     label: Container(
                         color: tabselection,
                         padding: const EdgeInsets.all(8.0),
                         alignment: Alignment.center,
-                        child: const Text('Quality Engineer'))),
+                        child: Text(
+                          'Quality Engineer',
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: textPrimary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ))),
                 GridColumn(
                     columnName: 'Delivery Date',
                     label: Container(
                         color: tabselection,
                         padding: const EdgeInsets.all(8.0),
                         alignment: Alignment.center,
-                        child: const Text('Delivery Date'))),
+                        child: Text(
+                          'Delivery Date',
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: textPrimary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ))),
                 GridColumn(
                     columnName: 'Status',
                     label: Container(
                         color: tabselection,
                         padding: const EdgeInsets.all(8.0),
                         alignment: Alignment.center,
-                        child: const Text('Status'))),
+                        child: Text(
+                          'Status',
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: textPrimary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ))),
                 GridColumn(
                     columnName: 'Remarks',
                     label: Container(
                         color: tabselection,
                         padding: const EdgeInsets.all(8.0),
                         alignment: Alignment.center,
-                        child: const Text('Remarks'))),
+                        child: Text(
+                          'Remarks',
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: textPrimary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ))),
                 GridColumn(
                     columnName: 'Actions',
                     label: Container(
                         color: tabselection,
                         padding: const EdgeInsets.all(8.0),
                         alignment: Alignment.center,
-                        child: const Text('Actions'))),
+                        child: Text(
+                          'Actions',
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: textPrimary,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ))),
               ],
             ),
           ],
@@ -258,7 +343,13 @@ class PendingPOsSource extends DataGridSource {
           ),
         ),
         alignment: Alignment.center,
-        child: Text(e.value.toString()),
+        child: Text(
+          e.value.toString(),
+          style: GoogleFonts.montserrat(
+            textStyle: const TextStyle(
+                color: textPrimary, fontSize: 14, fontWeight: FontWeight.w500),
+          ),
+        ),
       );
     }).toList());
   }
